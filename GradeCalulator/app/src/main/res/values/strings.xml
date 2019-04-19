@@ -1,0 +1,97 @@
+<resources>
+    <string name="app_name">GradeCalulator</string>
+
+    <string-array name="program">
+        <item>Bachelor Degree</item>
+        <item>Master in Cyber Security</item>
+    </string-array>
+
+    <string-array name="master_subject">
+        <item>ITCY511 Computer and Network Security (3)</item>
+        <item>ITCY541 Digital Forensics Technologies and Techniques (3)</item>
+        <item>ITCY513 Cyber Ethics and Law (2)</item>
+        <item>ITCY512 Information Security Management (3)</item>
+        <item>ITCY515 Research Methodology and Seminar in Cybersecurity and Information Assurance (1)</item>
+        <item>ITCY531 System Hardening and Penetration Testing (3)</item>
+        <item>ITCY571 Information Assurance and Risk Analysis (3)</item>
+        <item>ITCY698 Thesis (3)</item>
+        <item>ITCY698 Thesis (9)</item>
+        <item>ITCY697 Research Project (6)</item>
+        <item>ITCY514 Fraud Analysis and Detection (3)</item>
+        <item>ITCY534 Reverse Engineering and Vulnerability Analysis (3)</item>
+        <item>ITCY543 Network Forensics (3)</item>
+        <item>ITCY544 Mobile Security (3)</item>
+        <item>ITCY545 Cloud Security (3)</item>
+        <item>ITCY561 Ethical Hacking (3)</item>
+        <item>ITCY562 Intrusion Detection and Prevention (3)</item>
+        <item>ITCY591 Special Topics in Cyber Security and Forensics (3)</item>
+        <item>ITCY551 Application of Cryptography (3)</item>
+        <item>ITCY552 Authentication Technology Management (3)</item>
+        <item>ITCY553 Secure Software Design (3)</item>
+        <item>ITCY572 Information and Social Networks Security (3)</item>
+        <item>ITCY573 E-Services Security Management (3)</item>
+        <item>ITCY581 Incident Response Management (3)</item>
+        <item>ITCY592 Special Topics in Information Assurance (3)</item>
+    </string-array>
+
+
+    <string-array name='Bachlor_subject'>
+        <item>SCBI109 Integrated Biology (3)</item>
+        <item>SHSS103 Man and Society (2)</item>
+        <item>SHSS116 Comparative Culture (2)</item>
+        <item>SCCH100 Integrated Chemistry (3)</item>
+        <item>ITCS320 Discrete Structures (3)</item>
+        <item>ITCS211 Introduction to Digital Systems (3)</item>
+        <item>ITCS375 Advanced Mathematics I for Computer Science (3)</item>
+        <item>ITCS161 Physical Science and Computation (3)</item>
+        <item>ITGE101 Problem Solving Techniques (2)</item>
+        <item>ITCS208 Object Oriented Programming (3)</item>
+        <item>ITCS200 Fundamentals of Programming (3)</item>
+        <item>ITCS302 Technical English II (2)</item>
+        <item>ITCS301 Technical English I (2)</item>
+        <item>ITCS125 Applied Statistics for Computing (3)</item>
+        <item>SPGE102 Yoga for Health (1)</item>
+        <item>ITLG182 Reading Skills (2)</item>
+        <item>ITLG181 Public Speaking and Presentation (2)</item>
+        <item>ITCS306 Numerical Methods (3)</item>
+        <item>ITCS323 Computer Data Communication (3)</item>
+        <item>ITID276 Management (2)</item>
+        <item>ITCS381 Introduction to Multimedia Systems (3)</item>
+        <item>ITCS210 Web Programming (3)</item>
+        <item>ITCS343 Principles of Operating Systems (3)</item>
+        <item>ITCS222 Computer Organization and Architecture (3)</item>
+        <item>ITCS411 Database Management Systems (3)</item>
+        <item>ITCS321 Data Structures and Algorithm Analysis (3)</item>
+        <item>ITGE301 Communication Strategies in Professional Life (2)</item>
+        <item>ITCS159 Software Lab for Basic Scientific Problem Solving (1)</item>
+        <item>ITCS335 Introduction to E-business Systems (3)</item>
+        <item>ITLG281 Business Writing (2)</item>
+        <item>ITLG282 Academic Writing (2)</item>
+        <item>ITCS371 Introduction to Software Engineering (3)</item>
+        <item>ITCS424 Wireless and Mobile Computing (3)</item>
+        <item>ITCS414 Information Storage and Retrieval (3)</item>
+        <item>ITCS461 Computer and Communication Security (3)</item>
+        <item>ITCS420 Computer Networks (3)</item>
+        <item>ITCS336 Human Computer Interface (3)</item>
+        <item>ITCS451 Artificial Intelligence (3)</item>
+        <item>ITCS391 Computer Network Lab (1)</item>
+        <item>ITCS443 Distributed and Parallel Systems (3)</item>
+        <item>ITCS361 Management Information Systems (3)</item>
+        <item>ITCS402 Computer and Business Ethics (3)</item>
+        <item>ITID277 Digital Marketing (2)</item>
+        <item>ITCS499 Senior Project (6)</item>
+
+    </string-array>
+
+    <string-array name="Grade_List">
+        <item>A</item>
+        <item>B+</item>
+        <item>B</item>
+        <item>C+</item>
+        <item>C</item>
+        <item>D+</item>
+        <item>D</item>
+        <item>F</item>
+    </string-array>
+
+</resources>
