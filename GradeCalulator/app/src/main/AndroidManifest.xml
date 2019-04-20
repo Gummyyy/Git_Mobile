@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Master_Grade_Cal"></activity>
+        <activity android:name=".Subject_List_B"></activity>
+        <activity android:name=".Master_Grade_Cal" />
         <activity android:name=".Bachelor_Grade_Cal" />
         <activity android:name=".Register" />
         <activity android:name=".MainActivity">

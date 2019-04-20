@@ -190,7 +190,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
     }
 
     private void init(){
-        Change = (Button)findViewById(R.id.Change);
+        //Change = (Button)findViewById(R.id.Change);
         CGPA = (TextView)findViewById(R.id.Curr_GPA_Num);
         SubjectSpinner= (Spinner) findViewById(R.id.spinner_Subject);
         GradeSpinner = (Spinner) findViewById(R.id.spinner_Grade);

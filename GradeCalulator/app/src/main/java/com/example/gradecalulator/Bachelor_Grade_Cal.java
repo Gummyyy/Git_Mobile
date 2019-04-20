@@ -4,8 +4,12 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -32,6 +36,10 @@ public class Bachelor_Grade_Cal extends AppCompatActivity {
     private DatabaseHelper helper;
     private ArrayList<Subject> Subject_List = new ArrayList<Subject>();
     private String TABLE_NAME;
+    private TextView nav_header;
+    private TextView nav_sub;
+    private NavigationView navbar;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +48,10 @@ public class Bachelor_Grade_Cal extends AppCompatActivity {
         init();
 
         TABLE_NAME = getIntent().getStringExtra("table_name");
+        SQLiteDatabase db = helper.getWritableDatabase();
+        cursor = helper.getInfo(TABLE_NAME);
+        cursor.moveToFirst();
+        init_nav(cursor);
         String[] bachlor_set = getResources().getStringArray(R.array.Bachlor_subject);
         ArrayAdapter<String> adapterSubject = new ArrayAdapter<String>(this,
                 android.R.layout.simple_dropdown_item_1line, bachlor_set);
@@ -188,9 +200,46 @@ public class Bachelor_Grade_Cal extends AppCompatActivity {
         CGPA.setText(String.format("%.2f",GPA));
         add_view.setText(builder);
     }
+    private void init_nav(Cursor user){
+        navbar = (NavigationView) findViewById(R.id.nav_view);
+
+        View inflatedView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
+        nav_sub = (TextView) inflatedView.findViewById(R.id.nav_subheader) ;
+        nav_header = (TextView) inflatedView.findViewById(R.id.nav_header) ;
+        nav_sub.setText("Personal Information");
+        nav_header.setText(user.getString(cursor.getColumnIndex("FName")));
+        navbar.addHeaderView(inflatedView);
+
+        navbar.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                boolean c =false;
+                Intent i;
+                switch(id)
+                {
+                    default:
+                        c = true;
+                    case R.id.Subject_List:
+                        i = new Intent( Bachelor_Grade_Cal.this, Subject_List_B.class);
+                      //  i.putExtra();
+                        startActivity(i);
+                        break;
+                    case R.id.Grade_Cal:
+                        break;
+                    case R.id.LogOut:
+                        i = new Intent( Bachelor_Grade_Cal.this, MainActivity.class);
+                        //  i.putExtra();
+                        startActivity(i);
+                        break;
+                }
+                return c;
+            }
+        });
+    }
 
     private void init(){
-        Change = (Button)findViewById(R.id.Change);
+       // Change = (Button)findViewById(R.id.Change);
         CGPA = (TextView)findViewById(R.id.Curr_GPA_Num);
         SubjectSpinner= (Spinner) findViewById(R.id.spinner_Subject);
         GradeSpinner = (Spinner) findViewById(R.id.spinner_Grade);
@@ -198,6 +247,9 @@ public class Bachelor_Grade_Cal extends AppCompatActivity {
         remove_butt = (Button) findViewById(R.id.Remove_button);
         add_view =  (TextView)findViewById(R.id.add_view);
         helper = new DatabaseHelper(this);
+
+
+
         SQLiteDatabase db = helper.getWritableDatabase();
 
 
