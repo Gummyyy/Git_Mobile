@@ -59,17 +59,6 @@
     <!--app:layout_constraintTop_toBottomOf="@+id/loginPass" />-->
 
     <TextView
-        android:id="@+id/Language"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="Language:"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/thai"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
         android:id="@+id/appName"
         android:layout_width="182dp"
         android:layout_height="50dp"
@@ -98,7 +87,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="16dp"
         android:background="@android:color/holo_blue_light"
-        android:text="Register"
+        android:text="@string/Register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginLogin" />
@@ -120,20 +109,10 @@
         android:layout_height="0dp"
         android:layout_marginStart="124dp"
         android:layout_marginTop="4dp"
-        android:text="Remember Me"
+        android:text="@string/Remember_me"
         android:textSize="18sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginPass" />
-
-    <ImageView
-        android:id="@+id/thai"
-        android:layout_width="52dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toStartOf="@+id/eng"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/th" />
 
     <TextView
         android:id="@+id/Password"
@@ -141,20 +120,10 @@
         android:layout_height="0dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="12dp"
-        android:text="Password"
+        android:text="@string/password"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/loginUsername" />
-
-    <ImageView
-        android:id="@+id/eng"
-        android:layout_width="41dp"
-        android:layout_height="42dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/eng" />
 
     <Button
         android:id="@+id/loginLogin"
@@ -162,7 +131,7 @@
         android:layout_height="51dp"
         android:layout_marginTop="20dp"
         android:background="@android:color/holo_blue_light"
-        android:text="Login"
+        android:text="@string/Login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkbox" />
@@ -175,7 +144,7 @@
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toStartOf="@id/appName"
         app:layout_constraintTop_toTopOf="parent"
-         />
+        tools:srcCompat="@drawable/logoict" />
     <!--app:srcCompat="@drawable/logoict"-->
 
     <TextView
@@ -184,7 +153,7 @@
         android:layout_height="0dp"
         android:layout_marginStart="92dp"
         android:layout_marginTop="44dp"
-        android:text="Username"
+        android:text="@string/username"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/appName" />

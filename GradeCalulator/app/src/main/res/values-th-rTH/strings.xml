@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">GradeCalulator</string>
+    <string name="username">ชื่อผู้ใช้</string>
+    <string name="password">รหัสผ่าน</string>
+    <string name="Login">ลงชื่อเข้าใช้</string>
+    <string name="Register">สมัคร</string>
+    <string name="Remember_me">จดจำชื่อ</string>
+    <string name="Bachelor_degree">ปริญญาตรี</string>
+    <string name="Master_degree">ปริญญาโท</string>
+    <string name="Add_Subject">เพิ่มวิชา</string>
+    <string name="Add_Grade">เพิ่มเกรด</string>
+    <string name="Subject">รายวิชา</string>
+    <string name="Grade">เกรด</string>
+    <string name="Remove">ลบ</string>
+    <string name="Current_Grade">เกรดปัจจุบัน:</string>
+    <string name="ADD">เพิ่ม</string>
+</resources>

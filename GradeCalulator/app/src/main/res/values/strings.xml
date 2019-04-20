@@ -1,6 +1,19 @@
 <resources>
     <string name="app_name">GradeCalulator</string>
-
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="Login">Login</string>
+    <string name="Register">Register</string>
+    <string name="Remember_me">Remember Me</string>
+    <string name="Bachelor_degree">Bachelor Degree</string>
+    <string name="Master_degree">Master Degree</string>
+    <string name="Add_Subject">Add Subject</string>
+    <string name="Add_Grade">Add Grade</string>
+    <string name="Subject">Subject</string>
+    <string name="Grade">Grade</string>
+    <string name="Remove">Remove</string>
+    <string name="Current_Grade">Current Grade:</string>
+    <string name="ADD">ADD</string>
     <string-array name="program">
         <item>Bachelor Degree</item>
         <item>Master in Cyber Security</item>

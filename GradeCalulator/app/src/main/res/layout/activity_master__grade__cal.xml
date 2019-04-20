@@ -19,7 +19,7 @@
             android:layout_height="35dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="5dp"
-            android:text="Master Degree"
+            android:text="@string/Master_degree"
             android:textSize="24sp"
             app:layout_constraintTop_toBottomOf="@+id/Cur"
             tools:layout_editor_absoluteX="28dp" />
@@ -47,11 +47,11 @@
 
         <TextView
             android:id="@+id/Cur"
-            android:layout_width="181dp"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="44dp"
             android:layout_marginTop="20dp"
-            android:text="Current GPA:"
+            android:text="@string/Current_Grade"
             android:textSize="30sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -103,7 +103,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="3"
-                    android:text="Subject"
+                    android:text="@string/Subject"
                     android:textAlignment="center" />
 
                 <TextView
@@ -111,7 +111,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="Grade"
+                    android:text="@string/Grade"
                     android:textAlignment="center" />
 
             </LinearLayout>
@@ -149,7 +149,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="36dp"
-                    android:text="Add Subject :"
+                    android:text="@string/Add_Subject"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="172dp" />
 
@@ -172,7 +172,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="44dp"
-                    android:text="Add Grade :"
+                    android:text="@string/Add_Grade"
                     app:layout_constraintStart_toStartOf="parent"
                     tools:layout_editor_absoluteY="200dp" />
 
@@ -196,7 +196,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
-                android:text="ADD"
+                android:text="@string/ADD"
                 tools:layout_editor_absoluteX="290dp"
                 tools:layout_editor_absoluteY="172dp" />
 
@@ -208,20 +208,15 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@+id/scrollView2"
+        android:gravity="clip_horizontal|center_horizontal"
         android:orientation="horizontal">
 
         <Button
             android:id="@+id/Remove_button"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Remove" />
+            android:text="@string/Remove" />
 
-        <Button
-            android:id="@+id/Change"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Change" />
     </LinearLayout>
 
 

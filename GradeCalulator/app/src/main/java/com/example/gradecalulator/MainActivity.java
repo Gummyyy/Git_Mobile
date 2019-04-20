@@ -23,9 +23,9 @@ public class MainActivity extends AppCompatActivity {
         db = new DatabaseHelper(this);
         SQLiteDatabase dbl = db.getWritableDatabase();
 
-       // dbl.execSQL("drop table if exists user");
+       //dbl.execSQL("drop table if exists user");
         //dbl.execSQL("create table user(Fname text, Lname text, username text primary key, password text, Email text, Phone text)");
-      //  dbl.execSQL("create table user(FName text, LName text, username text primary key, password text, Email text, Phone text, Program text)");
+      // dbl.execSQL("create table user(FName text, LName text, username text primary key, password text, Email text, Phone text, Program text)");
         username = (EditText)findViewById(R.id.loginUsername);
         password = (EditText)findViewById(R.id.loginPass);
         login = (Button)findViewById(R.id.loginLogin);
