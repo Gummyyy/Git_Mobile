@@ -14,6 +14,19 @@
     <string name="Remove">Remove</string>
     <string name="Current_Grade">Current Grade:</string>
     <string name="ADD">ADD</string>
+    <string name="text_collapsed">Collapsed</string>
+
+    <string name="text_y1t1">Year:1st   Semester: 1st</string>
+    <string name="text_y1t2">Year:1st   Semester: 2nd</string>
+    <string name="text_y2t1">Year:2st   Semester: 1st</string>
+    <string name="text_y2t2">Year:2st   Semester: 2nd</string>
+    <string name="text_y3t1">Year:3st   Semester: 1st</string>
+    <string name="text_y3t2">Year:3st   Semester: 2nd</string>
+    <string name="text_y4t1">Year:4st   Semester: 1st</string>
+    <string name="text_y4t2">Year:4st   Semester: 2nd</string>
+
+
+
     <string-array name="program">
         <item>Bachelor Degree</item>
         <item>Master in Cyber Security</item>
@@ -93,8 +106,90 @@
         <item>ITCS402 Computer and Business Ethics (3)</item>
         <item>ITID277 Digital Marketing (2)</item>
         <item>ITCS499 Senior Project (6)</item>
-
     </string-array>
+
+    <string-array name='Bachlor_subject1_1'>
+        <item>SCBI	109	Integrated Biology</item>
+        <item>SHSS	116	Comparative Culture</item>
+        <item>ITCS	320	Discrete Structures</item>
+        <item>ITCS	375	Advanced Mathematics I for Computer Science</item>
+        <item>ITGE	101	Problem Solving Techniques</item>
+        <item>ITCS	200	Fundamentals of Programming</item>
+        <item>ITCS	301	Technical English I</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject1_2'>
+        <item>SHSS	103	Man and Society	</item>
+        <item>SCCH	100	Integrated Chemistry</item>
+        <item>ITCS	211	Introduction to Digital Systems</item>
+        <item>ITCS	161	Physical Science and Computation</item>
+        <item>ITCS	208	Object Oriented Programming</item>
+        <item>ITCS	302	Technical English II</item>
+        <item>ITCS	125	Applied Statistics for Computing</item>
+        <item>SPGE	102	Yoga for Health</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject2_1'>
+        <item>ITLG	182	Reading Skills</item>
+        <item>ITCS	306	Numerical Methods</item>
+        <item>ITID	276	Management</item>
+        <item>ITCS	210	Web Programming</item>
+        <item>ITCS	222	Computer Organization and Architecture</item>
+        <item>ITCS	321	Data Structures and Algorithm Analysis</item>
+        <item>ITCS	159	Software Lab for Basic Scientific Problem Solving</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject2_2'>
+        <item>ITLG	181	Public Speaking and Presentation</item>
+        <item>ITCS	323	Computer Data Communication</item>
+        <item>ITCS	381	Introduction to Multimedia Systems</item>
+        <item>ITCS	343	Principles of Operating Systems</item>
+        <item>ITCS	411	Database Management Systems</item>
+        <item>ITGE	301	Communication Strategies in Professional Life</item>
+        <item>ITCS	335	Introduction to E-business Systems</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject3_1'>
+        <item>ITLG	281	Business Writing</item>
+        <item>ITCS  371	Introduction to Software Engineering</item>
+        <item>ITCS	414	Information Storage and Retrieval	</item>
+        <item>ITCS	420	Computer Networks</item>
+        <item>ITCS	451	Artificial Intelligence</item>
+        <item>ITCS	443	Distributed and Parallel Systems</item>
+        <item>ITCS	361	Management Information Systems</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject3_2'>
+        <item>ITLG	282	Academic Writing</item>
+        <item>ITCS  424	Wireless and Mobile Computing</item>
+        <item>ITCS	461	Computer and Communication Security</item>
+        <item>ITCS	336	Human Computer Interface</item>
+        <item>ITCS	391	Computer Network Lab</item>
+        <item>ITCS	XXX	Specialty Course</item>
+        <item>ITCS	XXX	Specialty Courses</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject4_1'>
+        <item>ITCS	402	Computer and Business Ethics</item>
+        <item>ITID	277	Digital Marketing</item>
+        <item>ITCS	XXX	Specialty Courses</item>
+        <item>ITCS	XXX	Specialty Courses</item>
+        <item>ITCS	499	Senior Project</item>
+    </string-array>
+
+    <string-array name='Bachlor_subject4_2'>
+        <item>ITCS	499	Senior Project (continue)</item>
+    </string-array>
+
+
+
+
+
+
+
+
+
+
 
     <string-array name="Grade_List">
         <item>A</item>

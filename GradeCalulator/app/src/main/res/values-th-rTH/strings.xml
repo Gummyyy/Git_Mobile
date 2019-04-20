@@ -15,4 +15,13 @@
     <string name="Remove">ลบ</string>
     <string name="Current_Grade">เกรดปัจจุบัน:</string>
     <string name="ADD">เพิ่ม</string>
+    <string name="text_y1t1">ปี 1   เทอม 1</string>
+    <string name="text_y1t2">ปี 1   เทอม 2</string>
+    <string name="text_y2t1">ปี 2   เทอม 1</string>
+    <string name="text_y2t2">ปี 2   เทอม 2</string>
+    <string name="text_y3t1">ปี 3   เทอม 1</string>
+    <string name="text_y3t2">ปี 3   เทอม 2</string>
+    <string name="text_y4t1">ปี 4   เทอม 1</string>
+    <string name="text_y4t2">ปี 4   เทอม 2</string>
+    <string name="text_collapsed">Collapsed</string>
 </resources>
