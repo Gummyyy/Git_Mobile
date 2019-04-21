@@ -143,7 +143,6 @@ public class Subject_List_M extends AppCompatActivity {
         }
         listDataChild.put(listDataGroup.get(0),  Master1_1);
 
-
         List<String> Master1_2 = new ArrayList<>();
         array = getResources().getStringArray(R.array.Master_subject1_2);
         for (String item : array) {
