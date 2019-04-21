@@ -4,8 +4,11 @@ import android.content.ContentValues;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.annotation.NonNull;
+import android.support.design.widget.NavigationView;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -30,6 +33,10 @@ public class Master_Grade_Cal extends AppCompatActivity {
     private DatabaseHelper helper;
     private ArrayList<Subject> Subject_List = new ArrayList<Subject>();
     private String TABLE_NAME;
+    private TextView nav_header;
+    private TextView nav_sub;
+    private NavigationView navbar;
+    private Cursor cursor;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,6 +45,10 @@ public class Master_Grade_Cal extends AppCompatActivity {
         init();
 
         TABLE_NAME = getIntent().getStringExtra("table_name");
+        SQLiteDatabase db = helper.getWritableDatabase();
+        cursor = helper.getInfo(TABLE_NAME);
+        cursor.moveToFirst();
+        init_nav(cursor);
         String[] master_set = getResources().getStringArray(R.array.master_subject);
 
         ArrayAdapter<String> adapterSubject = new ArrayAdapter<String>(this,
@@ -187,6 +198,44 @@ public class Master_Grade_Cal extends AppCompatActivity {
         System.out.println(String.format("%.2f",GPA));
         CGPA.setText(String.format("%.2f",GPA));
         add_view.setText(builder);
+    }
+
+    private void init_nav(Cursor user){
+        navbar = (NavigationView) findViewById(R.id.nav_view);
+
+        View inflatedView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
+        nav_sub = (TextView) inflatedView.findViewById(R.id.nav_subheader) ;
+        nav_header = (TextView) inflatedView.findViewById(R.id.nav_header) ;
+        nav_sub.setText("Personal Information");
+        nav_header.setText(user.getString(cursor.getColumnIndex("FName")));
+        navbar.addHeaderView(inflatedView);
+
+        navbar.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int id = item.getItemId();
+                boolean c =false;
+                Intent i;
+                switch(id)
+                {
+                    default:
+                        c = true;
+                    case R.id.Subject_List:
+                        i = new Intent( Master_Grade_Cal.this, Subject_List_M.class);
+                        //  i.putExtra();
+                        startActivity(i);
+                        break;
+                    case R.id.Grade_Cal:
+                        break;
+                    case R.id.LogOut:
+                        i = new Intent( Master_Grade_Cal.this, MainActivity.class);
+                        //  i.putExtra();
+                        startActivity(i);
+                        break;
+                }
+                return c;
+            }
+        });
     }
 
     private void init(){

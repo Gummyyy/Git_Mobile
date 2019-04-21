@@ -18,13 +18,16 @@
 
     <string name="text_y1t1">Year:1st   Semester: 1st</string>
     <string name="text_y1t2">Year:1st   Semester: 2nd</string>
-    <string name="text_y2t1">Year:2st   Semester: 1st</string>
-    <string name="text_y2t2">Year:2st   Semester: 2nd</string>
-    <string name="text_y3t1">Year:3st   Semester: 1st</string>
-    <string name="text_y3t2">Year:3st   Semester: 2nd</string>
-    <string name="text_y4t1">Year:4st   Semester: 1st</string>
-    <string name="text_y4t2">Year:4st   Semester: 2nd</string>
-
+    <string name="text_y2t1">Year:2nd   Semester: 1st</string>
+    <string name="text_y2t2">Year:2nd   Semester: 2nd</string>
+    <string name="text_y3t1">Year:3rd   Semester: 1st</string>
+    <string name="text_y3t2">Year:3rd   Semester: 2nd</string>
+    <string name="text_y4t1">Year:4th   Semester: 1st</string>
+    <string name="text_y4t2">Year:4th   Semester: 2nd</string>
+    <string name="Sem1">1st Semester</string>
+    <string name="Sem2">2nd Semester</string>
+    <string name="Sem3">3rd Semester</string>
+    <string name="elective">Elective Courses</string>
 
 
     <string-array name="program">
@@ -180,14 +183,43 @@
     <string-array name='Bachlor_subject4_2'>
         <item>ITCS	499	Senior Project (continue)</item>
     </string-array>
+    <string-array name='Master_subject1_1'>
+        <item>ITCY 511 Computer and Network Security (3)</item>
+        <item>ITCY 541 Digital Forensics Technologies and Techniques (3)</item>
+        <item>ITCY 513 Cyber Ethics and Law (2)</item>
+        <item>ITCY 512 Information Security Management (3)</item>
+        <item>ITCY 515 Research Methodology and Seminar in Cybersecurity and Information Assurance (1)</item>
+    </string-array>
 
+    <string-array name='Master_subject1_2'>
+        <item>ITCY 531 System Hardening and Penetration Testing (3)</item>
+        <item>ITCY 571 Information Assurance and Risk Analysis (3)</item>
+        <item>ITCY 698 Thesis (3)</item>
+        <item>Elective course no less than 3 credits</item>
+    </string-array>
 
+    <string-array name='Master_subject1_3'>
+        <item>ITCY 698 Thesis (9)</item>
+        <item>Elective course no less than 3 credits</item>
+    </string-array>
 
-
-
-
-
-
+    <string-array name='Master_elective'>
+        <item>ITCY 514 Fraud Analysis and Detection (3)</item>
+        <item>ITCY 534 Reverse Engineering and Vulnerability Analysis (3)</item>
+        <item>ITCY 543 Network Forensics (3)</item>
+        <item>ITCY 544 Mobile Security (3)</item>
+        <item>ITCY 545 Cloud Security (3)</item>
+        <item>ITCY 561 Ethical Hacking (3)</item>
+        <item>ITCY 562 Intrusion Detection and Prevention (3)</item>
+        <item>ITCY 591 Special Topics in Cyber Security and Forensics (3)</item>
+        <item>ITCY 551 Application of Cryptography (3)</item>
+        <item>ITCY 552 Authentication Technology Management (3)</item>
+        <item>ITCY 553 Secure Software Design (3)</item>
+        <item>ITCY 572 Information and Social Networks Security (3)</item>
+        <item>ITCY 573 E-Services Security Management (3)</item>
+        <item>ITCY 581 Incident Response Management (3)</item>
+        <item>ITCY 592 Special Topics in Information Assurance (3)</item>
+    </string-array>
 
 
 
