@@ -32,4 +32,12 @@
     <string name="Subject_list">รายชื่อวิชา</string>
     <string name="Grade_Calculator">คำนวณเกรด</string>
     <string name="Logout">ออกจากระบบ</string>
+    <string name="Firstname">ชื่อ</string>
+    <string name="Lastname">นามสกุล</string>
+    <string name="email">อีเมล</string>
+    <string name="text_password">รหัสผ่าน</string>
+    <string name="phoneno">หมายเลขโทรศัพท์</string>
+    <string name="program">โปรแกรม</string>
+    <string name="back">กลับ</string>
+    <string name="cpass">ยืนยันรหัสผ่าน</string>
 </resources>
