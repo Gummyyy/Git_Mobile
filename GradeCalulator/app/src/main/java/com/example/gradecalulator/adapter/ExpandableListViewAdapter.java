@@ -12,7 +12,7 @@ import com.example.gradecalulator.R;
 
 import java.util.HashMap;
 import java.util.List;
-
+// adapter class for create expanable list view
 public class ExpandableListViewAdapter extends BaseExpandableListAdapter {
 
     private Context context;

@@ -1,6 +1,7 @@
 package com.example.gradecalulator;
 
 public class Subject {
+    // class for create subject object to define subject nad its credit
     private String subject_detail;
     private int credit;
 

@@ -18,6 +18,7 @@ import static com.example.gradecalulator.Constants.SUBJECT;
 //import static com.example.gradecalulator.Constants.TABLE_NAME;
 
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    //init private variable
     private String TABLE_NAME;
     private DatabaseHelper db;
     private EditText fname, lname, username, pass, cpass, email, phone;
@@ -29,7 +30,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         setContentView(R.layout.activity_register);
 
         db = new DatabaseHelper(this);
-
+        //linking xml component to java variablee
         fname = (EditText)findViewById(R.id.regFName);
         lname = (EditText)findViewById(R.id.regLName);
         username = (EditText)findViewById(R.id.regUsername);
@@ -46,7 +47,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         program.setAdapter(adapter);
         program.setOnItemSelectedListener(this);
-
+        // get value from xml edit text into java variable
         register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -59,6 +60,7 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                 String s7 = phone.getText().toString();
                 String s8 = program.getSelectedItem().toString();
 
+                //define successful case and failure case
                 if(s1.equals("")||s2.equals("")||s3.equals("")||s4.equals("")||s5.equals("")||s6.equals("")||s7.equals("")){
                     //Toast.makeText(getApplicationContext(), "Field are empty", Toast.LENGTH_SHORT).show();
                     openDialog7();
@@ -67,13 +69,14 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                     if(s2.equals(s3)){
                         Boolean userCheck = db.checkUser(s1);
                         Boolean emailCheck = db.checkEmail(s4);
-
+                        // successful
                         if(userCheck == true){
                             if(emailCheck == true) {
                                 Boolean insert = db.insert(s1, s2, s4, s5, s6, s7,s8);
                                 //add grade list db
                                 TABLE_NAME = s1;
                                 SQLiteDatabase dbex = db.getWritableDatabase();
+                                // create user table to save grade and define the constant value
                                 dbex.execSQL("CREATE TABLE " + TABLE_NAME + " (" + _ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " + SUBJECT + " TEXT NOT NULL, " + GRADE + " TEXT NOT NULL);");
                                 dbex.execSQL("CREATE UNIQUE INDEX idx_"+ s1 +" ON " + TABLE_NAME + " (" + SUBJECT +");");
 
@@ -84,15 +87,18 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
                                 }
                             }
                             else{
+                                // email error
                                 //Toast.makeText(getApplicationContext(), "Email already exists", Toast.LENGTH_SHORT).show();
                                 openDialog2();
                             }
                         }
                         else{
+                            // Username error
                             //Toast.makeText(getApplicationContext(), "Username already exists", Toast.LENGTH_SHORT).show();
                             openDialog3();
                         }
                     }
+                    //password error
                     else //Toast.makeText(getApplicationContext(), "Password does not match", Toast.LENGTH_SHORT).show();
                         openDialog4();
                 }
@@ -108,27 +114,27 @@ public class Register extends AppCompatActivity implements AdapterView.OnItemSel
             }
         });
     }
-
+        //dialog prompt
     public void openDialog1() {
         Dialog1 dialog = new Dialog1();
         dialog.show(getSupportFragmentManager(), "register dialog");
     }
-
+    //dialog prompt
     public void openDialog2() {
         Dialog2 dialog = new Dialog2();
         dialog.show(getSupportFragmentManager(), "email error");
     }
-
+    //dialog prompt
     public void openDialog3() {
         Dialog3 dialog = new Dialog3();
         dialog.show(getSupportFragmentManager(), "username error");
     }
-
+    //dialog prompt
     public void openDialog4() {
         Dialog4 dialog = new Dialog4();
         dialog.show(getSupportFragmentManager(), "password error");
     }
-
+    //dialog prompt
     public void openDialog7() {
         Dialog7 dialog = new Dialog7();
         dialog.show(getSupportFragmentManager(), "password error");

@@ -7,6 +7,7 @@ import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    // database helper class for doing some sql command
     public DatabaseHelper(Context context) {
         super(context, "login.db", null, 1);
     }

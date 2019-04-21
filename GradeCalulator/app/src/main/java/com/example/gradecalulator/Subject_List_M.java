@@ -135,7 +135,7 @@ public class Subject_List_M extends AppCompatActivity {
         // array of strings
         String[] array;
 
-        // list of MasterDegree
+        // add subject list in each semester to dict
         List<String> Master1_1 = new ArrayList<>();
         array = getResources().getStringArray(R.array.Master_subject1_1);
         for (String item : array) {

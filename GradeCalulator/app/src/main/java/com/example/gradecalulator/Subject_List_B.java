@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.List;
 
 public class Subject_List_B extends AppCompatActivity {
+    // create private variable
     private ExpandableListView expandableListView;
 
     private ExpandableListViewAdapter expandableListViewAdapter;
@@ -141,7 +142,7 @@ public class Subject_List_B extends AppCompatActivity {
         // array of strings
         String[] array;
 
-        // list of BachelorDegree
+        // add subject list in each semester to dict
         List<String> Bachelor1_1 = new ArrayList<>();
         array = getResources().getStringArray(R.array.Bachlor_subject1_1);
         for (String item : array) {

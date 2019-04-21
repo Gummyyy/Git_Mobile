@@ -23,6 +23,7 @@ import java.util.ArrayList;
 import static android.provider.BaseColumns._ID;
 
 public class Master_Grade_Cal extends AppCompatActivity {
+    //init prvate variable for linking to xml
     private TextView CGPA;
     private Button Change;
     private Spinner SubjectSpinner;
@@ -40,15 +41,18 @@ public class Master_Grade_Cal extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //linking xml component to java variable
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_master__grade__cal);
         init();
 
+        //init database helper
         TABLE_NAME = getIntent().getStringExtra("table_name");
         SQLiteDatabase db = helper.getWritableDatabase();
         cursor = helper.getInfo(TABLE_NAME);
         cursor.moveToFirst();
         init_nav(cursor);
+        // put data set into spinner
         String[] master_set = getResources().getStringArray(R.array.master_subject);
 
         ArrayAdapter<String> adapterSubject = new ArrayAdapter<String>(this,
@@ -62,6 +66,8 @@ public class Master_Grade_Cal extends AppCompatActivity {
 
 
         //assign grade to db
+
+        //get data from db
         try {
             Cursor cursor = getAllGrades();
             showGrades(cursor);
@@ -69,7 +75,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
         } finally {
             helper.close();
         }
-
+        // set button action
         add_butt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -111,6 +117,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
 
 
     }
+    // add grade to db function
     private void addGrade(String sub, String gra){
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -118,6 +125,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
         values.put(GRADE, gra);
         db.execSQL("INSERT OR REPLACE INTO " +TABLE_NAME+ " (Subject,grade) VALUES('" + sub +"','" + gra+ "');");
     }
+    // remove grade from db function
     private void removeGrade(){
         SQLiteDatabase db = helper.getWritableDatabase();
         ContentValues values = new ContentValues();
@@ -128,13 +136,14 @@ public class Master_Grade_Cal extends AppCompatActivity {
     private static String[] COLUMNS = {_ID, SUBJECT, GRADE};
     private static String ORDER_BY = _ID + " ASC";
 
+    // get grade from database function
     private Cursor getAllGrades(){
         SQLiteDatabase db = helper.getReadableDatabase();
         Cursor cursor = db.query(TABLE_NAME, COLUMNS, null, null, null, null, ORDER_BY);
 
         return cursor;
     }
-
+    // function for canculate grade ##not use##
     private void calGrades(Cursor cursor){
         StringBuilder builder = new StringBuilder("");
         int count = 0;
@@ -152,7 +161,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
          builder.append(Double.toString(GPA));
          CGPA.setText(builder);**/
     }
-
+    // function for getting grade from db and show in text view + grade calculation
     private void showGrades(Cursor cursor){
         StringBuilder builder = new StringBuilder("\t\t");
         int count = 0;
@@ -161,7 +170,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
         /**  for(Subject str: Subject_List){
          System.out.println(str.getSubject_detail());
          }**/
-
+        // get value for cursor
         while (cursor.moveToNext()){
             double temp_sum = 0;
             long id = cursor.getLong(0);
@@ -176,6 +185,8 @@ public class Master_Grade_Cal extends AppCompatActivity {
             }
             System.out.println("credit :"+ temp_sum);
             //count ++;
+
+            //convert alphabet to the number for calcuation
             switch(grade){
                 case "A": temp_sum *= 4; break;
                 case "B+": temp_sum *= 3.5; break;
@@ -194,14 +205,18 @@ public class Master_Grade_Cal extends AppCompatActivity {
             builder.append("\t\t").append(grade).append("\n\n\t\t");
         }
         //System.out.println(sum);
+        //grade calculation
         GPA = sum/count;
         System.out.println(String.format("%.2f",GPA));
+        //set textview value
         CGPA.setText(String.format("%.2f",GPA));
         add_view.setText(builder);
     }
 
+    //nav bar init function
     private void init_nav(Cursor user){
         navbar = (NavigationView) findViewById(R.id.nav_view);
+        //set nav header and body content
 
         View inflatedView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
         nav_sub = (TextView) inflatedView.findViewById(R.id.nav_sub) ;
@@ -209,7 +224,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
         nav_sub.setText(user.getString(cursor.getColumnIndex("Email")));
         nav_header.setText(user.getString(cursor.getColumnIndex("FName")));
         navbar.addHeaderView(inflatedView);
-
+        // set navbar button to link to other page
         navbar.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
@@ -237,7 +252,7 @@ public class Master_Grade_Cal extends AppCompatActivity {
             }
         });
     }
-
+    // linking xml and java variable function
     private void init(){
         //Change = (Button)findViewById(R.id.Change);
         CGPA = (TextView)findViewById(R.id.Curr_GPA_Num);
@@ -252,7 +267,6 @@ public class Master_Grade_Cal extends AppCompatActivity {
 
 
         //crate subject and credit set
-
         // ArrayList<Subject> Subject_List = new ArrayList<Subject>();
         Subject_List.add(new Subject("ITCY511 Computer and Network Security (3)",3));
         Subject_List.add(new Subject("ITCY541 Digital Forensics Technologies and Techniques (3)",3));
