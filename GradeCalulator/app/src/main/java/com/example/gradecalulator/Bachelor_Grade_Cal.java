@@ -204,9 +204,9 @@ public class Bachelor_Grade_Cal extends AppCompatActivity {
         navbar = (NavigationView) findViewById(R.id.nav_view);
 
         View inflatedView = getLayoutInflater().inflate(R.layout.nav_header_main, null);
-        nav_sub = (TextView) inflatedView.findViewById(R.id.nav_subheader) ;
+        nav_sub = (TextView) inflatedView.findViewById(R.id.nav_sub) ;
         nav_header = (TextView) inflatedView.findViewById(R.id.nav_header) ;
-        nav_sub.setText("Personal Information");
+        nav_sub.setText(user.getString(cursor.getColumnIndex("Email")));
         nav_header.setText(user.getString(cursor.getColumnIndex("FName")));
         navbar.addHeaderView(inflatedView);
 

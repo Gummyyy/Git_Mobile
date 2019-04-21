@@ -27,4 +27,9 @@
     <string name="Sem1">เทอม 1</string>
     <string name="Sem2">เทอม 2</string>
     <string name="Sem3">เทอม 3</string>
+    <string name="Hello">สวัสดี,</string>
+    <string name="elective">วิชาเลือก</string>
+    <string name="Subject_list">รายชื่อวิชา</string>
+    <string name="Grade_Calculator">คำนวณเกรด</string>
+    <string name="Logout">ออกจากระบบ</string>
 </resources>

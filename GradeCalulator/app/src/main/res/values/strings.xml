@@ -15,6 +15,10 @@
     <string name="Current_Grade">Current Grade:</string>
     <string name="ADD">ADD</string>
     <string name="text_collapsed">Collapsed</string>
+    <string name="Hello">Hello,</string>
+    <string name="Subject_list">Subject List</string>
+    <string name="Grade_Calculator">Grade Calculator</string>
+    <string name="Logout">Logout</string>
 
     <string name="text_y1t1">Year:1st   Semester: 1st</string>
     <string name="text_y1t2">Year:1st   Semester: 2nd</string>

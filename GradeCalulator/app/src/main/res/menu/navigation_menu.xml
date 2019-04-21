@@ -2,10 +2,13 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
 
-    <item android:id="@+id/Subject_List"
-        android:title="Subject List"/>
-    <item android:id="@+id/Grade_Cal"
-        android:title="Grade Calculator"/>
-    <item android:id="@+id/LogOut"
-        android:title="Logout"/>
+    <item
+        android:id="@+id/Subject_List"
+        android:title="@string/Subject_list" />
+    <item
+        android:id="@+id/Grade_Cal"
+        android:title="@string/Grade_Calculator" />
+    <item
+        android:id="@+id/LogOut"
+        android:title="@string/Logout" />
 </menu>

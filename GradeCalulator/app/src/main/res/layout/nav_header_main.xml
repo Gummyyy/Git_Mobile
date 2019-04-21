@@ -21,8 +21,9 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
             android:layout_weight="1"
-            android:text="Hello,"
+            android:text="@string/Hello"
             android:textColor="@android:color/background_light"
             android:textSize="30sp" />
 
@@ -41,7 +42,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/nav_subheader"
+        android:id="@+id/nav_sub"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:paddingLeft="16dp"
