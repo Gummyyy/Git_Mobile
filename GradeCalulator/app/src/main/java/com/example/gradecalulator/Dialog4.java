@@ -8,6 +8,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AlertDialog.Builder;
 import android.support.v7.app.AppCompatDialogFragment;
 //dialog class
+// code reference :https://youtu.be/Jho1GC6cuVU
 public class Dialog4 extends AppCompatDialogFragment {
     public Dialog onCreateDialog(Bundle savedInstanceState){
         AlertDialog.Builder builder = new Builder(getActivity());

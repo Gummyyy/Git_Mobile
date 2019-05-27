@@ -21,6 +21,9 @@ import static com.example.gradecalulator.Constants.GRADE;
 import static com.example.gradecalulator.Constants.SUBJECT;
 //import static com.example.gradecalulator.Constants.TABLE_NAME;
 
+// code reference
+//url: https://www.youtube.com/watch?v=6xIUf9kogPU&list=PLfan6e7_XlyrAxl3hDcKs6JizaW2mb6MK&index=4
+
 import java.util.ArrayList;
 
 import static android.provider.BaseColumns._ID;

@@ -8,6 +8,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+// code reference
+//url: https://youtu.be/1WPAXHhG6u0
 // link to login page
 public class MainActivity extends AppCompatActivity {
     //init  private variable

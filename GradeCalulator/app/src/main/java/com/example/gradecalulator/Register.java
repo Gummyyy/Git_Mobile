@@ -17,6 +17,8 @@ import static com.example.gradecalulator.Constants.GRADE;
 import static com.example.gradecalulator.Constants.SUBJECT;
 //import static com.example.gradecalulator.Constants.TABLE_NAME;
 
+// code reference :https://youtu.be/Jho1GC6cuVU
+
 public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
     //init private variable
     private String TABLE_NAME;

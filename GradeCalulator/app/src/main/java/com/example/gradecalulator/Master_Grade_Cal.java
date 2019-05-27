@@ -22,6 +22,9 @@ import java.util.ArrayList;
 
 import static android.provider.BaseColumns._ID;
 
+// code reference
+//url: https://www.youtube.com/watch?v=6xIUf9kogPU&list=PLfan6e7_XlyrAxl3hDcKs6JizaW2mb6MK&index=4
+
 public class Master_Grade_Cal extends AppCompatActivity {
     //init prvate variable for linking to xml
     private TextView CGPA;

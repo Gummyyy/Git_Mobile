@@ -12,6 +12,9 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
+//code reference: http://www.appliedcodelog.com/2016/06/expandablelistview-in-xamarin-android.html?fbclid=IwAR0t2QwLDHgdGUj23b_6jwG3H90OO2lUkv9xhg-VY6TUbr2HA7BpY9wgllk
+
+
 public class Subject_List_M extends AppCompatActivity {
     private ExpandableListView expandableListView;
 
